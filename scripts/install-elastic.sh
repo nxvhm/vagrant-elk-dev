@@ -13,23 +13,29 @@ else
     sudo apt-get install default-jre -y
 fi
 
+ELASTIC_DEB_URL="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb"
+ELASTIC_DEB_FILENAME="elasticsearch-6.6.0.deb"
 
 # Download elastic deb
-echo "Downdloading https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb"
+echo "Downdloading $ELASTIC_DEB_URL"
 
 mkdir /vagrant/tmp &> /dev/null
 
 cd /vagrant/tmp
 
-curl https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb --output elasticsearch-6.6.0.deb --silent
+curl $ELASTIC_DEB_URL --output $ELASTIC_DEB_FILENAME --silent
 
-echo "Finished downloading elasticsearch-6.6.0.deb"
+echo "Finished downloading $ELASTIC_DEB_FILENAME"
+
+echo "Install Elasticsearch"
 
 # Install .deb file
-echo "Install Elasticsearch"
-sudo dpkg -i elasticsearch-6.6.0.deb
+sudo dpkg -i $ELASTIC_DEB_FILENAME
+
 # Remove .deb file
-rm elasticsearch-6.6.0.deb
+rm $ELASTIC_DEB_FILENAME
+
+#sudo echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
 
 
