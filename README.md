@@ -27,3 +27,7 @@ switch the following lines in ``Vagrantfile``
 ubuntu.vm.synced_folder "elastic-stack/", "/elastic-stack/"
 #ubuntu.vm.synced_folder "elastic-stack/", "/elastic-stack/", type: "rsync" 
 ```
+
+## TODO
+1. Find a better way to determine if kibana is fully loaded and exposed through http
+2. Add Elasticsearch authentication
