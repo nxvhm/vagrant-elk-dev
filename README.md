@@ -1,7 +1,7 @@
 # Elasticsearch/Kibana simple dev. environment based on Vagrant and Virtualbox
 
 ## Installation
-
+0. Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](https://www.vagrantup.com/downloads.html)  
 1. Clone the repository 
 2. ``cd valgrant-elk-dev``
 3. ``mkdir elastic-stack``        
