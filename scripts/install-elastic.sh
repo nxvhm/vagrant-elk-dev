@@ -35,7 +35,7 @@ sudo dpkg -i $ELASTIC_DEB_FILENAME
 # Remove .deb file
 rm $ELASTIC_DEB_FILENAME
 
-#sudo echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
+sudo echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
 
 
