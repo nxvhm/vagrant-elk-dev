@@ -35,7 +35,13 @@ sudo dpkg -i $ELASTIC_DEB_FILENAME
 # Remove .deb file
 rm $ELASTIC_DEB_FILENAME
 
+# Expose elastic to your host
 sudo echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 
+# Comment out the default path.data config
+sudo sed -i '33 s/^/#/' /etc/elasticsearch/elasticsearch.yml
+
+# Set elastic data folder to our shared folder
+sudo echo "path.data: /vagrant/elastic-stack" >> /etc/elasticsearch/elasticsearch.yml
 
 
