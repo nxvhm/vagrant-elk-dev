@@ -11,7 +11,7 @@ This is the default shared folder which will contain the elasticsearch data
 *Required Vagrant version >= 1.9.6*
 
 After boot and provision Elastcisearch should be available on the host machine on localhost:9200
-After boot and provision Kibana should be available on the host machine on  localhost:5601
+and Kibana should be available on localhost:5601
 
 ## Software installed
 Java Runtime Environment    
