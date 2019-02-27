@@ -18,11 +18,10 @@ Java Runtime Environment
 Elasticsearch 6.6.0 (https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb)     
 Kibana 6.6.0 (https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb)      
 
-If you're going to export the vagrant box and you want the elasticsearch data to be exported too
-switch the following lines in ``Vagrantfile``
-
-
 ## Export
+
+If you're going to export the vagrant box and you want the elasticsearch data to be exported too
+switch the following lines in ``Vagrantfile``           
 
 ```
 ubuntu.vm.synced_folder "elastic-stack/", "/elastic-stack/"
