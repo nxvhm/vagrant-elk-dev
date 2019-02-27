@@ -10,11 +10,12 @@ This is the default shared folder which will contain the elasticsearch data
 
 *Required Vagrant version >= 1.9.6*
 
-After boot and provision Kibana should be available on the host machine on port 5601
+After boot and provision Elastcisearch should be available on the host machine on localhost:9200
+After boot and provision Kibana should be available on the host machine on  localhost:5601
 
 ## Software installed
 Java Runtime Environment    
-Elasticsearch 6.6.0 (https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb)     
+Elasticsearch 6.6.0 (https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb)     
 Kibana 6.6.0 (https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb)      
 
 If you're going to export the vagrant box and you want the elasticsearch data to be exported too
