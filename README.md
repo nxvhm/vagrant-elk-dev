@@ -18,7 +18,7 @@ and Kibana should be available on localhost:5601
 ## Software installed
 Java Runtime Environment    
 Elasticsearch 8.2.1 (https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.2.1.deb)     
-Kibana 8.2.2 (https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb)         
+Kibana 8.2.2 (https://artifacts.elastic.co/downloads/kibana/kibana-8.2.1-amd64.deb)         
 Ubuntu 18.04.6 LTS (https://app.vagrantup.com/ubuntu/boxes/bionic64/versions/20220523.0.0)   
 
 ## Export
