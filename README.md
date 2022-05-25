@@ -13,10 +13,13 @@ This is the default shared folder which will contain the elasticsearch data
 After boot and provision Elastcisearch should be available on the host machine on localhost:9200
 and Kibana should be available on localhost:5601
 
+**Default security is disabled, check /etc/elasticsearch/elasticsearch.ym**
+
 ## Software installed
 Java Runtime Environment    
-Elasticsearch 6.6.0 (https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb)     
-Kibana 6.6.0 (https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb)      
+Elasticsearch 8.2.1 (https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.2.1.deb)     
+Kibana 8.2.2 (https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb)         
+Ubuntu 18.04.6 LTS (https://app.vagrantup.com/ubuntu/boxes/bionic64/versions/20220523.0.0)   
 
 ## Export
 
@@ -30,4 +33,3 @@ ubuntu.vm.synced_folder "elastic-stack/", "/elastic-stack/"
 
 ## TODO
 1. Find a better way to determine if kibana is fully loaded and exposed through http
-2. Add Elasticsearch authentication

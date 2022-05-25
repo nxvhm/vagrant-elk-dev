@@ -5,8 +5,10 @@ Vagrant.configure(2) do |config|
     config.vm.define "ubuntu-elk" do |ubuntu|
 
         ubuntu.vm.box = "ubuntu/bionic64"
-
+        ubuntu.vm.box_version = "20220523.0.0"
         ubuntu.vm.hostname = "elastick-stack"
+        
+        config.vm.network "private_network", ip: "192.168.10.20"
 
         ubuntu.vm.network :forwarded_port, guest: 9200, host: 9200
 

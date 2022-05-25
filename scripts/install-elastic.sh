@@ -13,11 +13,14 @@ else
     sudo apt-get install default-jre -y
 fi
 
-ELASTIC_DEB_URL="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.0.deb"
-ELASTIC_DEB_FILENAME="elasticsearch-6.6.0.deb"
+# Download and install the public signing key:
+sudo apt-get install apt-transport-https
+
+ELASTIC_DEB_URL="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.2.1-amd64.deb"
+ELASTIC_DEB_FILENAME="elasticsearch-8.2.1.deb"
 
 # Download elastic deb
-echo "Downdloading $ELASTIC_DEB_URL"
+# echo "Downdloading $ELASTIC_DEB_URL"
 
 mkdir /vagrant/tmp &> /dev/null
 
@@ -41,7 +44,19 @@ sudo echo "network.host: 0.0.0.0" >> /etc/elasticsearch/elasticsearch.yml
 # Comment out the default path.data config
 sudo sed -i '33 s/^/#/' /etc/elasticsearch/elasticsearch.yml
 
+# Comment out the default security  xpack.security.enabled: true
+sudo sed -i '98 s/^/#/' /etc/elasticsearch/elasticsearch.yml
+
 # Set elastic data folder to our shared folder
 sudo echo "path.data: /vagrant/elastic-stack" >> /etc/elasticsearch/elasticsearch.yml
 
+sudo echo "xpack.security.enabled: false" >> /etc/elasticsearch/elasticsearch.yml
 
+# execute the following statements to configure elasticsearch service to start automatically using systemd
+sudo systemctl daemon-reload
+
+# Add vagrant user to elasticsearch group
+sudo adduser vagrant elasticsearch
+
+# change owner of elastcisearch folder
+sudo chown elasticsearch:elasticsearch /etc/elasticsearch

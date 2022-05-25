@@ -3,8 +3,8 @@ export DEBIAN_FRONTEND=noninteractive
 
 cd /vagrant/tmp
 
-KIBANA_DEB_URL="https://artifacts.elastic.co/downloads/kibana/kibana-6.6.0-amd64.deb"
-KIBANA_DEB_FILENAME="kibana-6.6.0-amd64.deb"
+KIBANA_DEB_URL="https://artifacts.elastic.co/downloads/kibana/kibana-8.2.1-amd64.deb"
+KIBANA_DEB_FILENAME="kibana-8.2.1-amd64.deb"
 
 echo "Downloading $KIBANA_DEB_URL"
 
