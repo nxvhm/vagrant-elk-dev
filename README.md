@@ -24,7 +24,7 @@ Ubuntu 18.04.6 LTS (https://app.vagrantup.com/ubuntu/boxes/bionic64/versions/202
 
 ## Start automatically with security on
 
-To enable the security feature comment out line 48 and line 53 ioon ``install-elastic.sh`` script (those disables the default security) and comment out the manual start script from Vagrantfile:
+To enable the security feature comment out line 48 and line 53 in ``install-elastic.sh`` script (those disables the default security) and comment out the manual start script from Vagrantfile:
 ```
 # config.vm.provision :shell, path: "scripts/start-services.sh", run: 'always'
 ```
